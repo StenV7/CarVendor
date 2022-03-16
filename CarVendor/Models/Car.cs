@@ -13,6 +13,7 @@ namespace CarVendor.Models
         /// The license plate.
         /// </value>
         [LicensePlate, Key, Display(Name = "Kenteken")]
+        [MaxLength(8, ErrorMessage = "{0} is een ongeldig kenteken. Mag maximaal {1} tekens bevatten")]
         public string LicensePlate { get; set; } = string.Empty;
 
         /// <summary>
@@ -22,6 +23,7 @@ namespace CarVendor.Models
         /// The mark.
         /// </value>
         [Display(Name = "Merk")]
+        [MaxLength (50, ErrorMessage = "{0} mag niet meer dan {1} tekens bevatten")]
         public string Mark { get; set; } = string.Empty;
 
         /// <summary>
